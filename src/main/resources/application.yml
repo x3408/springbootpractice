@@ -1,0 +1,23 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///imooc
+    username: root
+    password: xc19961016
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+person:
+  lastName: xc
+  age: 10
+  boss: false
+  maps: {a: 1,b: 2}
+  list: [a,b,c]
+  birthday: 2017/12/12
+student:
+  id: 3
+  name: xc
+  age: 22
