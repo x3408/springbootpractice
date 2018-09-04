@@ -1,6 +1,5 @@
 package com.xc.springbootpractice;
 
-import com.xc.springbootpractice.Entity.Person;
 import com.xc.springbootpractice.Entity.Result;
 import com.xc.springbootpractice.Entity.Student;
 import org.junit.Test;
