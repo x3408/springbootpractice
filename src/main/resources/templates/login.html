@@ -3,9 +3,9 @@
 <meta>
     <meta charset="UTF-8">
     <title>登录</title>
-    <link rel="stylesheet" href="css/login.css" th:href="@{css/login.css}">
-    <link rel="stylesheet" href="css/iconfont.css" th:href="@{css/iconfont.css}">
-    <link rel="icon" href="images/favicon.ico" th:href="@{images/favicon.ico}">
+    <link rel="stylesheet" href="css/login.css" th:href="@{/css/login.css}">
+    <link rel="stylesheet" href="css/iconfont.css" th:href="@{/css/iconfont.css}">
+    <link rel="icon" href="images/favicon.ico" th:href="@{/images/favicon.ico}">
 </head>
 <body>
 <!--顶部开始-->
@@ -18,16 +18,18 @@
 <!--顶部结束-->
 <!--主体区开始-->
     <div id="box">
-        <img src="images/m_banner4.jpg" alt="">
+        <img src="images/m_banner4.jpg" th:src="@{/images/m_banner4.jpg }" alt="">
         <div class="login">
             <div class="top">
                 <a href="#" class="top_left">账号登录</a>
                 <a href="#" class="top_right">扫码登录</a>
             </div>
             <div class="content">
-                <form action="">
-                    <input type="text" class="m_input1" placeholder="邮箱/手机号码/小米ID" th:placeholder="#{login.tip}"><br>
-                    <input type="password" class="m_input2" placeholder="密码" th:placeholder="#{login.button}"><br>
+                <form action="" th:action="@{/user/login}" method="post">
+                    <input type="text" class="m_input1" placeholder="邮箱/手机号码/小米ID" th:placeholder="#{login.tip}" name="username"><br>
+                    <input type="password" class="m_input2" placeholder="密码" th:placeholder="#{login.button}" name="password"><br>
+                    <!--判断-->
+                    <p style="color: red;" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
                     <input type="submit" class="m_input3" value="登录" th:value="#{login.button}">
                 </form>
                 <div class="mm_know">
@@ -39,7 +41,7 @@
                 </div>
             </div>
             <fieldset class="m_set">
-                <legend align="center" class="mm_set">其他方式登录</legend>
+                <legend align="center" class="mm_set">[[#{login.otherLoginWay}]]</legend>
             </fieldset>
             <div class="footer">
                 <a href="#"><i class="iconfont icon-qq" style="color: deepskyblue;"></i></a>
@@ -52,7 +54,8 @@
 <!--主体区结束-->
 <!--尾部-->
 <div class="m_footer">探索黑科技，小米为发烧而生</div>
-
+<div><a href="#" th:href="@{http://localhost:8080/login.html(l='en_US')}">English</a></div>
+<div><a href="#" th:href="@{http://localhost:8080/login.html(l='ch_ZH')}">中文</a></div>
 <!--尾部结束-->
 </body>
 </html>
