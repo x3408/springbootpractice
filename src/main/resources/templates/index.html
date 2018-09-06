@@ -14,32 +14,7 @@
 </head>
 <body>
     <!--顶部开始-->
-    <div id="box">
-        <div class="center">
-            <div class="left">
-                <a href="#" style="padding-left: 0">小米商城<span></span></a>
-                <a href="#">MIUI<span></span></a>
-                <a href="#">IoT<span></span></a>
-                <a href="#">云服务<span></span></a>
-                <a href="#">金融<span></span></a>
-                <a href="#">有品<span></span></a>
-                <a href="#">小爱开放平台<span></span></a>
-                <a href="#">政企服务<span></span></a>
-                <a href="#">Select Region</a>
-            </div>
-            <div class="right">
-                <a href="login.html" th:if="${session.loginUser}">[[${session.loginUser}]]<span></span></a>
-                <a href="#" th:if="${session.loginUser}">注册<span></span></a>
-                <a href="#">消息通知</a>
-                <div class="cart">
-                    <a href="#"><i class="iconfont icon-gouwuche"></i>购物车(0)</a>
-                    <div class="hide">
-                        购物车中还没有商品，赶紧选购吧！
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div th:replace="~{common/bar :: topbar}"></div>
     <!--顶部结束-->
     <!--导航开始-->
     <div id="nav">
@@ -47,7 +22,7 @@
         <a href="" class="dd_a"><img src="images/nav.gif" alt=""></a>
         <div class="menu">
             <div class="top">
-                <a href="#">小米手机</a>
+                <a href="#" th:href="@{/phone}">小米手机</a>
                 <a href="#">红米</a>
                 <a href="#">电视</a>
                 <a href="#">笔记本</a>
@@ -2328,33 +2303,6 @@
     </div>
 <!--footer结束-->
 <!--footer开始2-->
-    <div class="end_mc">
-        <div class="end_mc_content">
-            <div class="logo"></div>
-            <div class="me_detail">
-               探索黑科技，小米为发烧而生
-            </div>
-    </div>
-    </div>
-<!--footer结束2-->
-        <script>
-        window.onmousedown = function () {
-            if (window.event) {
-                if (event.button == 2) {
-                    alert('想看代码，没门😀');
-                    return false;
-                }
-            }
-        }
-        document.onkeydown = function(event) {
-            var ev = event || window.event || arguments.callee.caller.arguments[0];
-
-            if (event.keyCode = 123) {
-                alert('看代码是不可能的了，这辈子都不可能了😀');
-                return false;
-            }
-        }
-    </script>
-
+    <div th:replace="~{common/bar :: footer}"></div>
 </body>
 </html>

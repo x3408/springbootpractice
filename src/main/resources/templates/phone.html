@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/index.css" th:href="@{/css/index.css}">
+</head>
+<body>
+<div th:replace="~{common/bar :: topbar}"></div>
+<span>[[${phone}]]</span>
+</body>
+</html>
