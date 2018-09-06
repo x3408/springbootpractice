@@ -35,27 +35,11 @@ public class MyMvcConfig implements WebMvcConfigurer {
             @Override
             public void addInterceptors(InterceptorRegistry registry) {
                 //拦截任意路径请求
-                registry.addInterceptor(loginHandlerInterceptor).addPathPatterns("/**").excludePathPatterns("/login.html","/","/user/login");
+                registry.addInterceptor(loginHandlerInterceptor).addPathPatterns("/**")
+                        .excludePathPatterns("/login.html","/","/user/login","/css/**","/images/**","/layui/**");
             }
         };
-
         return adapter;
-    }
-
-    /**
-     *
-     * 功能描述:
-     *  配置静态资源,避免静态资源请求被拦截
-     * @auther: Tt(yehuawei)
-     * @date:
-     * @param:
-     * @return:
-     */
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/static/**")
-                .addResourceLocations("classpath:/static/");
-        registry.addResourceHandler("/templates/**")
-                .addResourceLocations("classpath:/templates/");
     }
 
 

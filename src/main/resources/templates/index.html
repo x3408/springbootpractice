@@ -28,8 +28,8 @@
                 <a href="#">Select Region</a>
             </div>
             <div class="right">
-                <a href="login.html">登录<span></span></a>
-                <a href="#">注册<span></span></a>
+                <a href="login.html" th:if="${session.loginUser}">[[${session.loginUser}]]<span></span></a>
+                <a href="#" th:if="${session.loginUser}">注册<span></span></a>
                 <a href="#">消息通知</a>
                 <div class="cart">
                     <a href="#"><i class="iconfont icon-gouwuche"></i>购物车(0)</a>
