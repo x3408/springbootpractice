@@ -27,17 +27,18 @@ public class MyMvcConfig implements WebMvcConfigurer {
         WebMvcConfigurer adapter = new WebMvcConfigurer() {
             @Override
             public void addViewControllers(ViewControllerRegistry registry) {
-                registry.addViewController("/").setViewName("login");
-                registry.addViewController("/login.html").setViewName("login");
+                registry.addViewController("/").setViewName("index");
                 registry.addViewController("/index.html").setViewName("index");
+                registry.addViewController("/listing.html").setViewName("listing");
+                registry.addViewController("/form.html").setViewName("form");
             }
 
-            @Override
+            /*@Override
             public void addInterceptors(InterceptorRegistry registry) {
                 //拦截任意路径请求
                 registry.addInterceptor(loginHandlerInterceptor).addPathPatterns("/**")
-                        .excludePathPatterns("/login.html","/","/user/login","/css/**","/images/**","/layui/**");
-            }
+                        .excludePathPatterns("/login.html","/","/user/login","/css/**","/images/**","/layui/**","/js/**","/img/**","/font/**");
+            }*/
         };
         return adapter;
     }

@@ -1,2308 +1,316 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>小米商城</title>
-    <link rel="stylesheet" href="css/index.css" th:href="@{/css/index.css}">
-    <link rel="stylesheet" href="css/iconfont.css" th:href="@{/css/iconfont.css}">
-    <link rel="icon" href="images/favicon.ico" th:href="@{/images/favicon.ico}">
-    <script src="js/jquery-1.10.1.js" th:src="@{/webjars/jquery/3.3.1-1/jquery.min.js}"></script>
-    <script src="js/index.js" th:src="@{js/index.js}"></script>
-    <link rel="stylesheet" href="layui/css/layui.css" th:href="@{layui/css/layui.css}">
-    <script src="layui/layui.js" th:src="@{layui/layui.js}"></script>
-    <script src="js/index1.js" th:src="@{js/index1.js}"></script>
-</head>
+
+	<meta charset="utf-8">
+    <title>Adminize</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <!-- Le styles -->
+    <link href="http://fonts.googleapis.com/css?family=Oxygen|Marck+Script" rel="stylesheet" type="text/css">
+    <link href="/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link href="/css/font-awesome.css" rel="stylesheet" th:href="@{/css/font-awesome.css}">
+    <link href="/css/admin.css" rel="stylesheet" th:href="@{/css/admin.css}">
+    
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>    
 <body>
-    <!--顶部开始-->
-    <div th:replace="~{common/bar :: topbar}"></div>
-    <!--顶部结束-->
-    <!--导航开始-->
-    <div id="nav">
-        <a href="#" class="mmm_a"></a>
-        <a href="" class="dd_a"><img src="images/nav.gif" alt=""></a>
-        <div class="menu">
-            <div class="top">
-                <a href="#" th:href="@{/phone}">小米手机</a>
-                <a href="#">红米</a>
-                <a href="#">电视</a>
-                <a href="#">笔记本</a>
-                <a href="#">空调</a>
-                <a href="#">新品</a>
-                <a href="#">路由器</a>
-                <a href="#">智能硬件</a>
-                <a href="#">服务</a>
-                <a href="#">社区</a>
-            </div>
-            <div class="bottom">
-                <ul>
-                    <li>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/pc-320-220-mi8.png" alt=""></a>
-                            <a href="#" class="title">小米8</a>
-                            <p class="price">3000元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/pc-320-220-mi8.png" alt=""></a>
-                            <a href="#" class="title">小米8</a>
-                            <p class="price">3000元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/pc-320-220-mi8.png" alt=""></a>
-                            <a href="#" class="title">小米8</a>
-                            <p class="price">3000元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/pc-320-220-mi8.png" alt=""></a>
-                            <a href="#" class="title">小米8</a>
-                            <p class="price">3000元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/pc-320-220-mi8.png" alt=""></a>
-                            <a href="#" class="title">小米8</a>
-                            <p class="price">3000元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic" style="border:none;"><img src="images/pc-320-220-mi8.png" alt=""></a>
-                            <a href="#" class="title">小米8</a>
-                            <p class="price">3000元起</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/666320.png" alt=""></a>
-                            <a href="#" class="title">红米6 Pro</a>
-                            <p class="price">2699元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/666320.png" alt=""></a>
-                            <a href="#" class="title">红米6 Pro</a>
-                            <p class="price">2699元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/666320.png" alt=""></a>
-                            <a href="#" class="title">红米6 Pro</a>
-                            <p class="price">2699元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/666320.png" alt=""></a>
-                            <a href="#" class="title">红米6 Pro</a>
-                            <p class="price">2699元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/666320.png" alt=""></a>
-                            <a href="#" class="title">红米6 Pro</a>
-                            <p class="price">2699元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic" style="border:none;"><img src="images/666320.png" alt=""></a>
-                            <a href="#" class="title" >红米6 Pro</a>
-                            <p class="price">2699元起</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/75.png" alt=""></a>
-                            <a href="#" class="title">红米6 Pro</a>
-                            <p class="price">2699元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/75.png" alt=""></a>
-                            <a href="#" class="title">红米6 Pro</a>
-                            <p class="price">2699元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/75.png" alt=""></a>
-                            <a href="#" class="title">红米6 Pro</a>
-                            <p class="price">2699元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/75.png" alt=""></a>
-                            <a href="#" class="title">红米6 Pro</a>
-                            <p class="price">2699元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/75.png" alt=""></a>
-                            <a href="#" class="title">红米6 Pro</a>
-                            <p class="price">2699元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic" style="border:none;"><img src="images/75.png" alt=""></a>
-                            <a href="#" class="title">红米6 Pro</a>
-                            <p class="price">2699元起</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/bijiben.png" alt=""></a>
-                            <a href="#" class="title">小米笔记本</a>
-                            <p class="price">4199元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/bijiben.png" alt=""></a>
-                            <a href="#" class="title">小米笔记本</a>
-                            <p class="price">4199元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/bijiben.png" alt=""></a>
-                            <a href="#" class="title">小米笔记本</a>
-                            <p class="price">4199元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/bijiben.png" alt=""></a>
-                            <a href="#" class="title">小米笔记本</a>
-                            <p class="price">4199元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/bijiben.png" alt=""></a>
-                            <a href="#" class="title">小米笔记本</a>
-                            <p class="price">4199元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/bijiben.png" alt=""></a>
-                            <a href="#" class="title">小米笔记本</a>
-                            <p class="price">4199元起</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/kongtiao.jpg" alt=""></a>
-                            <a href="#" class="title">米家互联网空调</a>
-                            <p class="price">1999元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/pc-320-220-mi8.png" alt=""></a>
-                            <a href="#" class="title">红米6 Pro</a>
-                            <p class="price">2699元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/pc-320-220-mi8.png" alt=""></a>
-                            <a href="#" class="title">红米6 Pro</a>
-                            <p class="price">2699元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/kongtiao.jpg" alt=""></a>
-                            <a href="#" class="title">红米6 Pro</a>
-                            <p class="price">2699元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/pc-320-220-mi8.png" alt=""></a>
-                            <a href="#" class="title">红米6 Pro</a>
-                            <p class="price">2699元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic" style="border:none;"><img src="images/pc-320-220-mi8.png" alt=""></a>
-                            <a href="#" class="title">红米6 Pro</a>
-                            <p class="price">2699元起</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/pc-320-220-mi8.png" alt=""></a>
-                            <a href="#" class="title">红米6 Pro</a>
-                            <p class="price">2699元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/pc-320-220-mi8.png" alt=""></a>
-                            <a href="#" class="title">红米6 Pro</a>
-                            <p class="price">2699元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/pc-320-220-mi8.png" alt=""></a>
-                            <a href="#" class="title">红米6 Pro</a>
-                            <p class="price">2699元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/pc-320-220-mi8.png" alt=""></a>
-                            <a href="#" class="title">红米6 Pro</a>
-                            <p class="price">2699元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/pc-320-220-mi8.png" alt=""></a>
-                            <a href="#" class="title">红米6 Pro</a>
-                            <p class="price">2699元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic" style="border:none;"><img src="images/pc-320-220-mi8.png" alt=""></a>
-                            <a href="#" class="title">红米6 Pro</a>
-                            <p class="price">2699元起</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/pc-320-220-mi8.png" alt=""></a>
-                            <a href="#" class="title">红米6 Pro</a>
-                            <p class="price">2699元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/pc-320-220-mi8.png" alt=""></a>
-                            <a href="#" class="title">红米6 Pro</a>
-                            <p class="price">2699元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/pc-320-220-mi8.png" alt=""></a>
-                            <a href="#" class="title">红米6 Pro</a>
-                            <p class="price">2699元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/pc-320-220-mi8.png" alt=""></a>
-                            <a href="#" class="title">红米6 Pro</a>
-                            <p class="price">2699元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/pc-320-220-mi8.png" alt=""></a>
-                            <a href="#" class="title">红米6 Pro</a>
-                            <p class="price">2699元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic" style="border:none;"><img src="images/pc-320-220-mi8.png" alt=""></a>
-                            <a href="#" class="title">红米6 Pro</a>
-                            <p class="price">2699元起</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/pc-320-220-mi8.png" alt=""></a>
-                            <a href="#" class="title">红米6 Pro</a>
-                            <p class="price">2699元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/pc-320-220-mi8.png" alt=""></a>
-                            <a href="#" class="title">红米6 Pro</a>
-                            <p class="price">2699元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/pc-320-220-mi8.png" alt=""></a>
-                            <a href="#" class="title">红米6 Pro</a>
-                            <p class="price">2699元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/pc-320-220-mi8.png" alt=""></a>
-                            <a href="#" class="title">红米6 Pro</a>
-                            <p class="price">2699元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic"><img src="images/pc-320-220-mi8.png" alt=""></a>
-                            <a href="#" class="title">红米6 Pro</a>
-                            <p class="price">2699元起</p>
-                        </div>
-                        <div>
-                            <p class="hot">新品</p>
-                            <a href="#" class="pic" style="border:none;"><img src="images/pc-320-220-mi8.png" alt=""></a>
-                            <a href="#" class="title">红米6 Pro</a>
-                            <p class="price">2699元起</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="search">
-            <input type="text" name="" placeholder="请输入搜索内容">
-            <a href="#"><i class="iconfont icon-sousuo" style="font-size:24px;"></i></a>
 
-        </div>
-    </div>
-    <!--导航结束-->
-<!--banner开始-->
-    <div id="banner">
+<div class="container">
+		
+	<div class="row">
+		
+		<div class="span2">
+
+			<div th:replace="~{common/bar :: left-bar(mainUri='index')}"></div>
+		<!-- end main-left-col -->
+	
+	</div> <!-- end span2 -->
+	
+	<div class="span10">
+		
+	<div class="secondary-masthead">
+	
+		<ul class="nav nav-pills pull-right">
+			<li>
+				<a href="#"><i class="icon-globe"></i> View Website</a>
+			</li>
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-user"></i> John Smith <b class="caret"></b>
+				</a>
+				<ul class="dropdown-menu">
+					<li><a href="profile.html">Your Profile</a></li>
+					<li class="active"><a href="form.html">Account Settings</a></li>
+					<li class="divider"></li>
+					<li><a href="">Logout</a></li>
+				</ul>
+			</li>
+		</ul>
+
+		<ul class="breadcrumb">
+			<li>
+				<a href="#">Admin</a> <span class="divider">/</span>
+			</li>
+			<li class="active">Dashboard</li>
+		</ul>
+		
+	</div>
+	
+	<div class="main-area dashboard">
+
+		<div class="row">
+		
+			<div class="span10">
+			
+				<div class="slate clearfix">
+				
+					<a class="stat-column" href="#">
+						
+						<span class="number">16</span>
+						<span>Open Orders</span>
+						
+					</a>
+				
+					<a class="stat-column" href="#">
+						
+						<span class="number">452</span>
+						<span>Members</span>
+						
+					</a>
+				
+					<a class="stat-column" href="#">
+						
+						<span class="number">$2,512</span>
+						<span>Revenue</span>
+						
+					</a>
+				
+					<a class="stat-column" href="#">
+						
+						<span class="number">348</span>
+						<span>Subscribers</span>
+						
+					</a>
+				
+				</div>
+			
+			</div>
+		
+		</div>
+		
+		<div class="row">
+		
+			<div class="span5">
+			
+				<div class="slate">
+				
+					<div class="page-header">
+						<h2><i class="icon-signal pull-right"></i>Stats</h2>
+					</div>
+					<div id="placeholder" style="height: 297px;"></div>
+				
+				</div>
+			
+			</div>
+		
+			<div class="span5">
+			
+				<div class="slate">
+				
+					<div class="page-header">
+						<h2><i class="icon-shopping-cart pull-right"></i>Latest Orders</h2>
+					</div>
+					
+					<table class="orders-table table">
+					<tbody>
+						<tr>
+							<td><a href="">#12345 - Joe Bloggs</a> <span class="label label-info">Paid</span></td>
+							<td>$112.00</td>
+						</tr>
+						<tr>
+							<td><a href="">#12345 - Joe Bloggs</a> <span class="label label-success">Dispatched</span></td>
+							<td>$112.00</td>
+						</tr>
+						<tr>
+							<td><a href="">#12345 - Joe Bloggs</a> <span class="label label-important">Refunded</span></td>
+							<td>$112.00</td>
+						</tr>
+						<tr>
+							<td><a href="">#12345 - Joe Bloggs</a> <span class="label">Awaiting Payment</span></td>
+							<td>$112.00</td>
+						</tr>
+						<tr>
+							<td><a href="">#12345 - Joe Bloggs</a> <span class="label label-inverse">Failed</span></td>
+							<td>$112.00</td>
+						</tr>
+						<tr>
+							<td><a href="">#12345 - Joe Bloggs</a> <span class="label label-warning">Cancelled</span></td>
+							<td>$112.00</td>
+						</tr>
+						<tr>
+							<td><a href="">#12345 - Joe Bloggs</a> <span class="label label-info">Paid</span></td>
+							<td>$112.00</td>
+						</tr>
+						<tr>
+							<td colspan="2"><a href="">View more orders</a></td>
+						</tr>
+					</tbody>
+					</table>
+
+				</div>
+			
+			</div>
+		
+		</div>
+		
+		<div class="row">
+		
+			<div class="span5">
+			
+				<div class="slate">
+				
+					<div class="page-header">
+						<h2><a class="pull-right iconlink" href=""><i class="icon-rss"></i></a>News</h2>
+					</div>
+				
+					<table class="orders-table table">
+					<tbody>
+						<tr>
+							<td><a href="">News article title</a></td>
+							<td class="date">Today at 12:01</td>
+						</tr>
+						<tr>
+							<td><a href="">Another news article title</a></td>
+							<td class="date">Yesterday at 16:34</td>
+						</tr>
+						<tr>
+							<td><a href="">A third news article title</a></td>
+							<td class="date">22nd June 2014</td>
+						</tr>
+						<tr>
+							<td><a href="">This news article title spans onto two lines so we can see what it will look like</a></td>
+							<td class="date">21st June 2014</td>
+						</tr>
+						<tr>
+							<td><a href="">A final news article title</a></td>
+							<td class="date">20th June 2014</td>
+						</tr>
+						<tr>
+							<td colspan="2"><a href="">Read more news</a></td>
+						</tr>
+					</tbody>
+					</table>
+
+				</div>
+			
+			</div>
+		
+			<div class="span5">
+			
+				<div class="slate">
+				
+					<div class="page-header">
+						<h2><i class="icon-envelope-alt pull-right"></i>Enquiries</h2>
+					</div>
+				
+					<table class="orders-table table">
+					<tbody>
+						<tr>
+							<td><a href="">Customer enquiry</a> <span class="label label-info">New</span></td>
+							<td class="date">Today at 12:01</td>
+						</tr>
+						<tr>
+							<td><a href="">Another customer enquiry</a> <span class="label label-info">New</span></td>
+							<td class="date">Yesterday at 16:34</td>
+						</tr>
+						<tr>
+							<td><a href="">A third customer enquiry</a></td>
+							<td class="date">22nd June 2014</td>
+						</tr>
+						<tr>
+							<td><a href="">This customer enquiry spans onto two lines so we can see what it will look like</a></td>
+							<td class="date">21st June 2014</td>
+						</tr>
+						<tr>
+							<td><a href="">A final customer enquiry</a></td>
+							<td class="date">20th June 2014</td>
+						</tr>
+						<tr>
+							<td colspan="2"><a href="">View more enquiries</a></td>
+						</tr>
+					</tbody>
+					</table>
+
+				</div>
+			
+			</div>
+		
+		</div>
+		
+		<div class="row">
+		
+			<div class="span10 footer">
+			
+				<p>&copy; Website Name 2014</p>
+			
+			</div>
+		
+		</div>
+		
+	</div>
+	
+	</div> <!-- end span10 -->
+		
+	</div> <!-- end row -->
+		
+</div> <!-- end container -->
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/js/jquery.min.js" th:src="@{/js/jquery.min.js}"></script>
+<script src="/js/bootstrap.js" th:src="@{/js/bootstrap.js}"></script>
+<script src="/js/excanvas.min.js" th:src="@{/js/excanvas.min.js}"></script>
+<script src="/js/jquery.flot.min.js" th:src="@{/js/jquery.flot.min.js}"></script>
+<script src="/js/jquery.flot.resize.js" th:src="@{/js/jquery.flot.resize.js}"></script>
+<script type="text/javascript">
+$(function () {
+    var d1 = [];
+        d1.push([0, 32]);
+        d1.push([1, 30]);
+        d1.push([2, 24]);
+        d1.push([3, 17]);
+        d1.push([4, 11]);
+        d1.push([5, 25]);
+        d1.push([6, 28]);
+        d1.push([7, 36]);
+        d1.push([8, 44]);
+        d1.push([9, 52]);
+        d1.push([10, 53]);
+        d1.push([11, 50]);
+        d1.push([12, 45]);
+        d1.push([13, 42]);
+        d1.push([14, 40]);
+        d1.push([15, 36]);
+        d1.push([16, 34]);
+        d1.push([17, 24]);
+        d1.push([18, 17]);
+        d1.push([19, 17]);
+        d1.push([20, 20]);
+        d1.push([21, 28]);
+        d1.push([22, 36]);
+        d1.push([23, 38]);
+
+    $.plot($("#placeholder"), [ d1 ], { grid: { backgroundColor: 'white', color: '#999', borderWidth: 1, borderColor: '#DDD' }, colors: ["#FC6B0A"], series: { lines: { show: true, fill: true, fillColor: "rgba(253,108,11,0.4)" } } });
+});
+</script>
 
-        <div class="layui-carousel" id="test10">
-            <div carousel-item="" >
 
-                <div><img src="images/banner.jpg" width="1226px"></div>
-                <div><img src="images/banner1.jpg" width="1226px"></div>
-                <div><img src="images/banner2.jpg" width="1226px"></div>
-                <div><img src="images/banner3.jpg" width="1226px"></div>
-                <div><img src="images/m_banner4.jpg" width="1226px"></div>
-            </div>
-        </div>
-        <script>
-            layui.use(['carousel', 'form'], function(){
-                var carousel = layui.carousel
-                        ,form = layui.form;
-
-
-
-                //图片轮播
-                carousel.render({
-                    elem: '#test10'
-                    ,width: '1226px'
-                    ,height: '460px'
-                    ,interval: 3000
-                    ,anim: 'fade'
-                });
-
-
-                var $ = layui.$, active = {
-                    set: function(othis){
-                        var THIS = 'layui-bg-normal'
-                                ,key = othis.data('key')
-                                ,options = {};
-
-                        othis.css('background-color', '#5FB878').siblings().removeAttr('style');
-                        options[key] = othis.data('value');
-                        ins3.reload(options);
-                    }
-                };
-
-                //监听开关
-                form.on('switch(autoplay)', function(){
-                    ins3.reload({
-                        autoplay: this.checked
-                    });
-                });
-
-                $('.demoSet').on('keyup', function(){
-                    var value = this.value
-                            ,options = {};
-                    if(!/^\d+$/.test(value)) return;
-
-                    options[this.name] = value;
-                    ins3.reload(options);
-                });
-
-                //其它示例
-                $('.demoTest .layui-btn').on('click', function(){
-                    var othis = $(this), type = othis.data('type');
-                    active[type] ? active[type].call(this, othis) : '';
-                });
-            });
-        </script>
-        <ul class="left">
-            <li>
-                <a href="#">
-                <span>手机电话卡</span>
-                <i class="iconfont icon-youjiantou1"></i>
-                <div>
-                    <ul>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8-80.png" >
-                                <span>小米8</span>
-                            </a>
-
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8-80.png" >
-                                <span>小米8</span>
-                            </a>
-
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8-80.png" >
-                                <span>小米8</span>
-                            </a>
-
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8-80.png" >
-                                <span>小米8</span>
-                            </a>
-
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8-80.png" >
-                                <span>小米8</span>
-                            </a>
-
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8-80.png" >
-                                <span>小米8</span>
-                            </a>
-
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8-80.png" >
-                                <span>小米8</span>
-                            </a>
-
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8-80.png" >
-                                <span>小米8</span>
-                            </a>
-
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8-80.png" >
-                                <span>小米8</span>
-                            </a>
-
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8-80.png" >
-                                <span>小米8</span>
-                            </a>
-
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8-80.png" >
-                                <span>小米8</span>
-                            </a>
-
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8-80.png" >
-                                <span>小米8</span>
-                            </a>
-
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8-80.png" >
-                                <span>小米8</span>
-                            </a>
-
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8-80.png" >
-                                <span>小米8</span>
-                            </a>
-
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8-80.png" >
-                                <span>小米8</span>
-                            </a>
-
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8-80.png" >
-                                <span>小米8</span>
-                            </a>
-
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8-80.png" >
-                                <span>小米8</span>
-                            </a>
-
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8-80.png" >
-                                <span>小米8</span>
-                            </a>
-
-                        </li>
-                    </ul>
-                </div>
-                </a>
-            </li>
-            <li><a href="#">
-                <span>电视盒子</span>
-                <i class="iconfont icon-youjiantou1"></i>
-                <div>
-                    <ul>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </a></li>
-            <li><a href="#">
-                <span>笔记本平板</span>
-                <i class="iconfont icon-youjiantou1"></i>
-                <div>
-                    <ul>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/max3-80-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/max3-80-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/max3-80-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/max3-80-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/max3-80-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/max3-80-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </a></li>
-            <li><a href="#">
-                <span>家电插线板</span>
-                <i class="iconfont icon-youjiantou1"></i>
-                <div>
-                    <ul>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </a></li>
-            <li><a href="#">
-                <span>出行穿戴</span>
-                <i class="iconfont icon-youjiantou1"></i>
-                <div>
-                    <ul>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </a></li>
-            <li><a href="#">
-                <span>智能路由器</span>
-                <i class="iconfont icon-youjiantou1"></i>
-                <div>
-                    <ul>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </a></li>
-            <li><a href="#">
-                <span>电源配件</span>
-                <i class="iconfont icon-youjiantou1"></i>
-                <div>
-                    <ul>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </a></li>
-            <li><a href="#">
-                <span>个护儿童</span>
-                <i class="iconfont icon-youjiantou1"></i>
-                <div>
-                    <ul>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </a></li>
-            <li><a href="#">
-                <span>耳机音箱</span>
-                <i class="iconfont icon-youjiantou1"></i>
-                <div>
-                    <ul>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </a></li>
-            <li><a href="#">
-                <span>生活箱包</span>
-                <i class="iconfont icon-youjiantou1"></i>
-                <div>
-                    <ul>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                        <li class="part">
-                            <a href="#" style="display:block;width:266px;height:75px;position:relative;">
-                                <img src="images/m8se-80.png" >
-                                <span>红米pro</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </a></li>
-        </ul>
-    </div>
-<!--banner结束-->
-<!--广告开始-->
-    <div id="mi_container">
-        <div class="left">
-            <ul class="top">
-                <li>
-                    <a href="#">
-                        <i class="iconfont icon-shouji"></i>
-                        <p>选购手机</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="iconfont icon-shouji"></i>
-                        <p>企业团购</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="iconfont icon-shouji"></i>
-                        <p>F码通道</p>
-                    </a>
-                </li>
-            </ul>
-            <ul class="m_bottom">
-                <li>
-                    <a href="#">
-                        <i class="iconfont icon-shouji"></i>
-                        <p>不限量卡</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="iconfont icon-shouji"></i>
-                        <p>以旧换新</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="iconfont icon-shouji"></i>
-                        <p>话费充值</p>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <ul>
-            <li><a href="#"><img src="images/container3.png" alt=""></a></li>
-            <li><a href="#"><img src="images/container2.jpg" alt=""></a></li>
-            <li style="margin-left:0;"><a href="#"><img src="images/container1.jpg" alt=""></a></li>
-        </ul>
-    </div>
-<!--广告结束-->
-<!--小米闪购文字开始-->
-    <div id="text">
-        <p>小米闪购</p>
-        <ul style="border-right:none;">
-            <li><a href="#"><</a></li>
-            <li><a href="#">></a></li>
-        </ul>
-    </div>
-<!--小米闪购文字结束-->
-    <!--小米闪购展示区开始-->
-    <div id="m_show">
-        <div class="left">
-            <p class="cc_top">10:00场</p>
-            <img src="images/shandian.png" alt="">
-            <p class="cc_content">距离开始还有</p>
-            <div class="cc_footer" id="cc_footer">
-                <div></div>
-                <div></div>
-                <div style="margin:0;"></div>
-            </div>
-        </div>
-        <div class="mmdd_box">
-        <ul>
-        <li><a href="#">
-
-
-            <img src="images/show2.jpg" alt="">
-            <p class="title">小米笔记本Air</p>
-
-            <p class="desc">轻薄长续航，超窄边框</p>
-            <p class="price"><span style="color:red;">1799元</span>&nbsp;&nbsp;<span style="text-decoration:line-through;color:rgb(190,201,208);">3599元</span></p>
-
-
-
-        </a></li>
-        <li>
-            <a href="#">
-                <p class="hot">1元秒杀</p>
-                <img src="images/show3.jpg" alt="">
-                <p class="title">小米笔记本Air</p>
-
-                <p class="desc">轻薄长续航，超窄边框</p>
-                <p class="price"><span style="color:red;">1799元</span>&nbsp;&nbsp;<span style="text-decoration:line-through;color:rgb(190,201,208);">3599元</span></p>
-
-            </a></li>
-        <li><a href="#">
-
-            <p class="hot">5折秒杀</p>
-            <img src="images/show2.jpg" alt="">
-            <p class="title">小米笔记本Air</p>
-
-            <p class="desc">轻薄长续航，超窄边框</p>
-            <p class="price"><span style="color:red;">1799元</span>&nbsp;&nbsp;<span style="text-decoration:line-through;color:rgb(190,201,208);">3599元</span></p>
-
-        </a></li>
-        <li style="margin-left:0;">
-            <a href="#">
-                <p class="hot">5折秒杀</p>
-                <img src="images/show2.jpg" alt="">
-                <p class="title">小米笔记本Air</p>
-
-                <p class="desc">轻薄长续航，超窄边框</p>
-                <p class="price"><span style="color:red;">1799元</span>&nbsp;&nbsp;<span style="text-decoration:line-through;color:rgb(190,201,208);">3599元</span></p>
-            </a>
-        </li>
-    </ul>
-            <ul>
-                <li><a href="#">
-
-
-                    <img src="images/show2.jpg" alt="">
-                    <p class="title">小米笔记本Air</p>
-
-                    <p class="desc">轻薄长续航，超窄边框</p>
-                    <p class="price"><span style="color:red;">1799元</span>&nbsp;&nbsp;<span style="text-decoration:line-through;color:rgb(190,201,208);">3599元</span></p>
-
-
-
-                </a></li>
-                <li>
-                    <a href="#">
-                        <p class="hot">1元秒杀</p>
-                        <img src="images/show2.jpg" alt="">
-                        <p class="title">小米笔记本Air</p>
-
-                        <p class="desc">轻薄长续航，超窄边框</p>
-                        <p class="price"><span style="color:red;">1799元</span>&nbsp;&nbsp;<span style="text-decoration:line-through;color:rgb(190,201,208);">3599元</span></p>
-
-                    </a></li>
-                <li><a href="#">
-
-                    <p class="hot">5折秒杀</p>
-                    <img src="images/show2.jpg" alt="">
-                    <p class="title">小米笔记本Air</p>
-
-                    <p class="desc">轻薄长续航，超窄边框</p>
-                    <p class="price"><span style="color:red;">1799元</span>&nbsp;&nbsp;<span style="text-decoration:line-through;color:rgb(190,201,208);">3599元</span></p>
-
-                </a></li>
-                <li style="margin-left:0;">
-                    <a href="#">
-                        <p class="hot">5折秒杀</p>
-                        <img src="images/show2.jpg" alt="">
-                        <p class="title">小米笔记本Air</p>
-
-                        <p class="desc">轻薄长续航，超窄边框</p>
-                        <p class="price"><span style="color:red;">1799元</span>&nbsp;&nbsp;<span style="text-decoration:line-through;color:rgb(190,201,208);">3599元</span></p>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <!--小米闪购展示区结束-->
-    <!--广告贴图区域-->
-    <div id="m_pic">
-        <a href="#">
-            <img src="images/m_pic1.jpg" alt="">
-        </a>
-    </div>
-<!--广告贴图区域结束-->
-<!--产品内容区域开始-->
-    <div id="m_bigBox">
-        <div id="m_content">
-            <div class="top">
-                <p class="m_left">手机</p>
-                <p class="m_right"><a href="#">查看全部
-                    <i class="iconfont icon-youjiantou1"></i>
-                </a></p>
-            </div>
-            <div class="m_sp">
-                <div class="m_sp_left">
-                    <img src="images/m_content.jpg" alt="" width="234px">
-                </div>
-                <div class="m_sp_right">
-                    <ul>
-                        <li><a href="#">
-
-
-                            <img src="images/hongmi.jpg" alt="">
-                            <p class="title">红米6A</p>
-
-                            <p class="desc">AI人脸解锁，小巧全面屏，高性能处理器</p>
-                            <p class="price"><span style="color:red;">1799元</span>&nbsp;&nbsp;<span style="text-decoration:line-through;color:rgb(190,201,208);">3599元</span></p>
-
-
-
-                        </a></li>
-                        <li>
-                            <a href="#">
-                                <p class="hot">1元秒杀</p>
-                                <img src="images/show3.jpg" alt="">
-                                <p class="title">小米笔记本Air</p>
-
-                                <p class="desc">轻薄长续航，超窄边框</p>
-                                <p class="price"><span style="color:red;">1799元</span>&nbsp;&nbsp;<span style="text-decoration:line-through;color:rgb(190,201,208);">3599元</span></p>
-
-                            </a></li>
-                        <li><a href="#">
-
-                            <p class="hot">5折秒杀</p>
-                            <img src="images/show2.jpg" alt="">
-                            <p class="title">小米笔记本Air</p>
-
-                            <p class="desc">轻薄长续航，超窄边框</p>
-                            <p class="price"><span style="color:red;">1799元</span>&nbsp;&nbsp;<span style="text-decoration:line-through;color:rgb(190,201,208);">3599元</span></p>
-
-                        </a></li>
-                        <li style="margin-left:0;">
-                            <a href="#">
-                                <p class="hot">5折秒杀</p>
-                                <img src="images/show2.jpg" alt="">
-                                <p class="title">小米笔记本Air</p>
-
-                                <p class="desc">轻薄长续航，超窄边框</p>
-                                <p class="price"><span style="color:red;">1799元</span>&nbsp;&nbsp;<span style="text-decoration:line-through;color:rgb(190,201,208);">3599元</span></p>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul style="margin-bottom:0;">
-                        <li><a href="#">
-
-
-                            <img src="images/show2.jpg" alt="">
-                            <p class="title">小米笔记本Air</p>
-
-                            <p class="desc">轻薄长续航，超窄边框</p>
-                            <p class="price"><span style="color:red;">1799元</span>&nbsp;&nbsp;<span style="text-decoration:line-through;color:rgb(190,201,208);">3599元</span></p>
-
-
-
-                        </a></li>
-                        <li>
-                            <a href="#">
-                                <p class="hot">1元秒杀</p>
-                                <img src="images/show3.jpg" alt="">
-                                <p class="title">小米笔记本Air</p>
-
-                                <p class="desc">轻薄长续航，超窄边框</p>
-                                <p class="price"><span style="color:red;">1799元</span>&nbsp;&nbsp;<span style="text-decoration:line-through;color:rgb(190,201,208);">3599元</span></p>
-
-                            </a></li>
-                        <li><a href="#">
-
-                            <p class="hot">5折秒杀</p>
-                            <img src="images/show2.jpg" alt="">
-                            <p class="title">小米笔记本Air</p>
-
-                            <p class="desc">轻薄长续航，超窄边框</p>
-                            <p class="price"><span style="color:red;">1799元</span>&nbsp;&nbsp;<span style="text-decoration:line-through;color:rgb(190,201,208);">3599元</span></p>
-
-                        </a></li>
-                        <li style="margin-left:0;">
-                            <a href="#">
-                                <p class="hot">5折秒杀</p>
-                                <img src="images/show2.jpg" alt="">
-                                <p class="title">小米笔记本Air</p>
-
-                                <p class="desc">轻薄长续航，超窄边框</p>
-                                <p class="price"><span style="color:red;">1799元</span>&nbsp;&nbsp;<span style="text-decoration:line-through;color:rgb(190,201,208);">3599元</span></p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-<!--产品内容区域结束-->
-<!--广告开始2-->
-    <div id="m_ad">
-        <a href=""><img src="images/next.jpg" alt=""></a>
-    </div>
-<!--广告结束2-->
-        <!--产品内容区域2开始-->
-        <div id="m_content2">
-            <div class="top">
-                <p class="m_left">家电</p>
-                <div class="box_right">
-                    <a href="#">热门</a>
-                    <a href="#">电视影音</a>
-                    <a href="#">电脑</a>
-                    <a href="#">家居</a>
-                </div>
-            </div>
-            <div class="m_sp">
-
-                    <ul>
-                        <li><a href="#">
-
-
-                            <img src="images/show2.jpg" alt="">
-                            <p class="title">小米笔记本Air</p>
-
-                            <p class="desc">轻薄长续航，超窄边框</p>
-                            <p class="price"><span style="color:red;">1799元</span>&nbsp;&nbsp;<span style="text-decoration:line-through;color:rgb(190,201,208);">3599元</span></p>
-                            <p class="m_hide">
-                                小米电视给我惊喜，昨天下午下单，第二天上午就送到家啦...<br>
-                                来自陈金壮的评价
-                            </p>
-
-
-                        </a></li>
-                        <li><a href="#">
-
-
-                            <img src="images/show2.jpg" alt="">
-                            <p class="title">小米笔记本Air</p>
-
-                            <p class="desc">轻薄长续航，超窄边框</p>
-                            <p class="price"><span style="color:red;">1799元</span>&nbsp;&nbsp;<span style="text-decoration:line-through;color:rgb(190,201,208);">3599元</span></p>
-
-
-
-                        </a></li>
-                        <li>
-                            <a href="#">
-                                <p class="hot">1元秒杀</p>
-                                <img src="images/show3.jpg" alt="">
-                                <p class="title">小米笔记本Air</p>
-
-                                <p class="desc">轻薄长续航，超窄边框</p>
-                                <p class="price"><span style="color:red;">1799元</span>&nbsp;&nbsp;<span style="text-decoration:line-through;color:rgb(190,201,208);">3599元</span></p>
-                                <p class="m_hide">
-                                    小米电视给我惊喜，昨天下午下单，第二天上午就送到家啦...<br>
-                                    来自陈金壮的评价
-                                </p>
-                            </a></li>
-                        <li><a href="#">
-
-                            <p class="hot">5折秒杀</p>
-                            <img src="images/show2.jpg" alt="">
-                            <p class="title">小米笔记本Air</p>
-
-                            <p class="desc">轻薄长续航，超窄边框</p>
-                            <p class="price"><span style="color:red;">1799元</span>&nbsp;&nbsp;<span style="text-decoration:line-through;color:rgb(190,201,208);">3599元</span></p>
-                            <p class="m_hide">
-                                小米电视给我惊喜，昨天下午下单，第二天上午就送到家啦...<br>
-                                来自陈金壮的评价
-                            </p>
-
-                        </a></li>
-                        <li style="margin-left:0;">
-                            <a href="#">
-
-                                <img src="images/pro1.jpg" alt="">
-
-                            </a>
-                        </li>
-                    </ul>
-                    <ul style="margin-bottom:0;">
-                        <li style="background:none;">
-                            <a href="#" class="ma_top">
-                                <div class="mc_container">
-                                    <div class="left">
-                                        <p style="font-size:14px;">小米净水器</p>
-                                        <p style="color:red;font-size: 12px;margin-top:8px;">1999元</p>
-                                    </div>
-                                    <div class="right right_sp">
-                                        <!--<img src="images/mc_small.jpg" >-->
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#" class="ma_bottom" style="margin-bottom:0;">
-                                <div class="mc_container">
-                                    <div class="left">
-                                        <p style="font-size:14px;">浏览更多</p>
-                                        <p style="color:red;font-size: 12px;margin-top:8px;">热门</p>
-                                    </div>
-                                    <div class="right">
-                                        <i class="iconfont icon-jiantouyou"></i>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p class="hot">1元秒杀</p>
-                                <img src="images/show3.jpg" alt="">
-                                <p class="title">小米笔记本Air</p>
-
-                                <p class="desc">轻薄长续航，超窄边框</p>
-                                <p class="price"><span style="color:red;">1799元</span>&nbsp;&nbsp;<span style="text-decoration:line-through;color:rgb(190,201,208);">3599元</span></p>
-                                <p class="m_hide">
-                                    小米电视给我惊喜，昨天下午下单，第二天上午就送到家啦...<br>
-                                    来自陈金壮的评价
-                                </p>
-                            </a></li>
-                        <li><a href="#">
-
-                            <p class="hot">5折秒杀</p>
-                            <img src="images/show2.jpg" alt="">
-                            <p class="title">小米笔记本Air</p>
-
-                            <p class="desc">轻薄长续航，超窄边框</p>
-                            <p class="price"><span style="color:red;">1799元</span>&nbsp;&nbsp;<span style="text-decoration:line-through;color:rgb(190,201,208);">3599元</span></p>
-                            <p class="m_hide">
-                                小米电视给我惊喜，昨天下午下单，第二天上午就送到家啦...<br>
-                                来自陈金壮的评价
-                            </p>
-                        </a></li>
-                        <li>
-                            <a href="#">
-                                <p class="hot">5折秒杀</p>
-                                <img src="images/show2.jpg" alt="">
-                                <p class="title">小米笔记本Air</p>
-
-                                <p class="desc">轻薄长续航，超窄边框</p>
-                                <p class="price"><span style="color:red;">1799元</span>&nbsp;&nbsp;<span style="text-decoration:line-through;color:rgb(190,201,208);">3599元</span></p>
-                                <p class="m_hide">
-                                    小米电视给我惊喜，昨天下午下单，第二天上午就送到家啦...<br>
-                                    来自陈金壮的评价
-                                </p>
-                            </a>
-                        </li>
-                        <li style="margin-left:0;">
-                            <a href="#">
-
-                                <img src="images/pro2.jpg">
-
-                            </a>
-                        </li>
-                    </ul>
-            </div>
-        </div>
-
-
-
-        <!--产品内容区域2结束-->
-        <!--广告开始3-->
-        <div id="m_ad3">
-            <a href=""><img src="images/pro4.jpg" alt=""></a>
-        </div>
-        <!--广告结束3-->
-        <!--产品内容区域3开始-->
-        <div id="m_content2">
-            <div class="top">
-                <p class="m_left">智能</p>
-                <div class="box_right">
-                    <a href="#">热门</a>
-                    <a href="#">出行</a>
-                    <a href="#">健康</a>
-                    <a href="#">酷玩</a>
-                    <a href="#">路由器</a>
-                </div>
-            </div>
-            <div class="m_sp">
-
-                <ul>
-                    <li><a href="#">
-
-
-                        <img src="images/show2.jpg" alt="">
-                        <p class="title">小米笔记本Air</p>
-
-                        <p class="desc">轻薄长续航，超窄边框</p>
-                        <p class="price"><span style="color:red;">1799元</span>&nbsp;&nbsp;<span style="text-decoration:line-through;color:rgb(190,201,208);">3599元</span></p>
-                        <p class="m_hide">
-                            小米电视给我惊喜，昨天下午下单，第二天上午就送到家啦...<br>
-                            来自陈金壮的评价
-                        </p>
-
-
-                    </a></li>
-                    <li><a href="#">
-
-
-                        <img src="images/show2.jpg" alt="">
-                        <p class="title">小米笔记本Air</p>
-
-                        <p class="desc">轻薄长续航，超窄边框</p>
-                        <p class="price"><span style="color:red;">1799元</span>&nbsp;&nbsp;<span style="text-decoration:line-through;color:rgb(190,201,208);">3599元</span></p>
-
-
-
-                    </a></li>
-                    <li>
-                        <a href="#">
-                            <p class="hot">1元秒杀</p>
-                            <img src="images/show3.jpg" alt="">
-                            <p class="title">小米笔记本Air</p>
-
-                            <p class="desc">轻薄长续航，超窄边框</p>
-                            <p class="price"><span style="color:red;">1799元</span>&nbsp;&nbsp;<span style="text-decoration:line-through;color:rgb(190,201,208);">3599元</span></p>
-                            <p class="m_hide">
-                                小米电视给我惊喜，昨天下午下单，第二天上午就送到家啦...<br>
-                                来自陈金壮的评价
-                            </p>
-                        </a></li>
-                    <li><a href="#">
-
-                        <p class="hot">5折秒杀</p>
-                        <img src="images/show2.jpg" alt="">
-                        <p class="title">小米笔记本Air</p>
-
-                        <p class="desc">轻薄长续航，超窄边框</p>
-                        <p class="price"><span style="color:red;">1799元</span>&nbsp;&nbsp;<span style="text-decoration:line-through;color:rgb(190,201,208);">3599元</span></p>
-                        <p class="m_hide">
-                            小米电视给我惊喜，昨天下午下单，第二天上午就送到家啦...<br>
-                            来自陈金壮的评价
-                        </p>
-
-                    </a></li>
-                    <li style="margin-left:0;">
-                        <a href="#">
-
-                            <img src="images/zhineng1.jpg" alt="">
-
-                        </a>
-                    </li>
-                </ul>
-                <ul style="margin-bottom:0;">
-                    <li style="background:none;">
-                        <a href="#" class="ma_top">
-                            <div class="mc_container">
-                                <div class="left">
-                                    <p style="font-size:14px;">小米VR眼镜</p>
-                                    <p style="color:red;font-size: 12px;margin-top:8px;">299元</p>
-                                </div>
-                                <div class="right right_sp">
-                                    <!--<img src="images/mc_small.jpg" >-->
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="ma_bottom" style="margin-bottom:0;">
-                            <div class="mc_container">
-                                <div class="left">
-                                    <p style="font-size:14px;">浏览更多</p>
-                                    <p style="color:red;font-size: 12px;margin-top:8px;">热门</p>
-                                </div>
-                                <div class="right">
-                                    <i class="iconfont icon-jiantouyou"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <p class="hot">1元秒杀</p>
-                            <img src="images/show3.jpg" alt="">
-                            <p class="title">小米笔记本Air</p>
-
-                            <p class="desc">轻薄长续航，超窄边框</p>
-                            <p class="price"><span style="color:red;">1799元</span>&nbsp;&nbsp;<span style="text-decoration:line-through;color:rgb(190,201,208);">3599元</span></p>
-                            <p class="m_hide">
-                                小米电视给我惊喜，昨天下午下单，第二天上午就送到家啦...<br>
-                                来自陈金壮的评价
-                            </p>
-                        </a></li>
-                    <li><a href="#">
-
-                        <p class="hot">5折秒杀</p>
-                        <img src="images/show2.jpg" alt="">
-                        <p class="title">小米笔记本Air</p>
-
-                        <p class="desc">轻薄长续航，超窄边框</p>
-                        <p class="price"><span style="color:red;">1799元</span>&nbsp;&nbsp;<span style="text-decoration:line-through;color:rgb(190,201,208);">3599元</span></p>
-                        <p class="m_hide">
-                            小米电视给我惊喜，昨天下午下单，第二天上午就送到家啦...<br>
-                            来自陈金壮的评价
-                        </p>
-                    </a></li>
-                    <li>
-                        <a href="#">
-                            <p class="hot">5折秒杀</p>
-                            <img src="images/show2.jpg" alt="">
-                            <p class="title">小米笔记本Air</p>
-
-                            <p class="desc">轻薄长续航，超窄边框</p>
-                            <p class="price"><span style="color:red;">1799元</span>&nbsp;&nbsp;<span style="text-decoration:line-through;color:rgb(190,201,208);">3599元</span></p>
-                            <p class="m_hide">
-                                小米电视给我惊喜，昨天下午下单，第二天上午就送到家啦...<br>
-                                来自陈金壮的评价
-                            </p>
-                        </a>
-                    </li>
-                    <li style="margin-left:0;">
-                        <a href="#">
-
-                            <img src="images/zhineng2.jpg">
-
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!--产品内容区域3结束-->
-    </div>
-<!--footer开始-->
-    <div class="m_end">
-        <ul>
-            <li><a href="#">
-                <i class="iconfont icon-gongju"></i>预约维修服务
-            </a></li>
-            <li><a href="#">
-                <i class="iconfont icon-gongju"></i>7天无理由退货
-            </a></li>
-            <li><a href="#">
-                <i class="iconfont icon-gongju"></i>15天免费换货
-            </a></li>
-            <li><a href="#">
-                <i class="iconfont icon-gongju"></i>满150元包邮
-            </a></li>
-            <li style="border:0;"><a href="#">
-                <i class="iconfont icon-gongju"></i>520余家售后网点
-            </a></li>
-        </ul>
-        <div class="md_center">
-            <div class="md_center_left">
-                <ul>
-                    <li style="margin:25px 0 ;color:black;font-size:14px;">帮助中心</li>
-                    <li><a href="#">账户管理</a></li>
-                    <li><a href="#">购物指南</a></li>
-                    <li><a href="#">订单操作</a></li>
-                </ul>
-                <ul>
-                    <li style="margin:25px 0 ;color:black;font-size:14px;">服务支持</li>
-                    <li><a href="#">售后政策</a></li>
-                    <li><a href="#">自助服务</a></li>
-                    <li><a href="#">相关下载</a></li>
-                </ul>
-                <ul>
-                    <li style="margin:25px 0 ;color:black;font-size:14px;">线下门店</li>
-                    <li><a href="#">小米之家</a></li>
-                    <li><a href="#">服务网点</a></li>
-                    <li><a href="#">授权体验店</a></li>
-                </ul>
-                <ul>
-                    <li style="margin:25px 0 ;color:black;font-size:14px;">关于小米</li>
-                    <li><a href="#">了解小米</a></li>
-                    <li><a href="#">加入小米</a></li>
-                    <li><a href="#">投资者关系</a></li>
-                </ul>
-                <ul>
-                    <li style="margin:25px 0 ;color:black;font-size:14px;">关注我们</li>
-                    <li><a href="#">新浪微博</a></li>
-                    <li><a href="#">官方微信</a></li>
-                    <li><a href="#">联系我们</a></li>
-                </ul>
-                <ul>
-                    <li style="margin:25px 0 ;color:black;font-size:14px;">特色服务</li>
-                    <li><a href="#">F码通道</a></li>
-                    <li><a href="#">礼物码</a></li>
-                    <li><a href="#">防伪查询</a></li>
-                </ul>
-            </div>
-            <div class="md_center_right">
-                <p class="tel">400-100-5678</p>
-                <p class="time">周一至周日 8:00-18:00</p>
-                <p class="time2">（仅收市话费）</p>
-                <button class="btn" >联系客服</button>
-            </div>
-        </div>
-    </div>
-<!--footer结束-->
-<!--footer开始2-->
-    <div th:replace="~{common/bar :: footer}"></div>
 </body>
 </html>
