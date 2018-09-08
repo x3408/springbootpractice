@@ -63,12 +63,6 @@
 	</div>
 	
 	<div class="main-area dashboard">
-	
-			<div class="alert alert-info">
-				<a class="close" data-dismiss="alert" href="#">x</a>
-				<h4 class="alert-heading">Information</h4>
-				The listing template can be used to list content that requires editing, such as pages, product catalogue, settings and members.
-			</div>
 			
 			<div class="row">
 			
@@ -100,11 +94,7 @@
 				
 				<div class="span10 listing-buttons">
 				
-					<button class="btn btn-info">Action</button>
-				
-					<button class="btn btn-success">Action</button>
-				
-					<button class="btn btn-primary">Add New Item</button>
+					<a class="btn btn-primary" th:href="@{/add.html}">Add New Item</a>
 				
 				</div>
 				
@@ -131,22 +121,17 @@
 						<thead>
 							<tr>
 								<th>Listing</th>
+								<th>Age</th>
 								<th class="actions">Actions</th>
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td><a href="form.html" th:href="@{/form.html}">Listing title</a> <span class="label label-info">Item Status</span><br /><span class="meta">Added Today</span></td>
+							<tr th:each="student : ${students}">
+								<td><a href="form.html" th:href="@{/form.html}" th:text="${student.name}"></a><br /><span class="meta">Added Today</span></td>
+								<td>[[${student.age}]]</td>
 								<td class="actions">
-									<a class="btn btn-small btn-danger" data-toggle="modal" href="#removeItem">Remove</a>
-									<a class="btn btn-small btn-primary" href="form.html">Edit</a>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="form.html" th:href="@{/form.html}">test</a><br /><span class="meta">Added Today</span></td>
-								<td class="actions">
-									<a class="btn btn-small btn-danger" data-toggle="modal" href="#removeItem">Remove</a>
-									<a class="btn btn-small btn-primary" href="form.html">Edit</a>
+									<a id="del_btn" class="btn btn-small btn-danger" data-toggle="modal" href="#removeItem" th:attr="del_uri=@{/student/} + ${student.id}">Remove</a>
+									<a class="btn btn-small btn-primary" href="form.html" th:href="@{/student/} + ${student.id}">Edit</a>
 								</td>
 							</tr>
 						</tbody>
@@ -166,8 +151,11 @@
 					</div>
 					<div class="modal-footer">
 						<a href="#" class="btn" data-dismiss="modal">Close</a>
-						<a href="#" class="btn btn-danger">Remove</a>
+						<a href="#" class="btn btn-danger deletebtn" >Remove</a>
 					</div>
+					<form id="deleteStuForm" method="post">
+						<input type="hidden" name="_method" value="delete">
+					</form>
 				</div>
 			
 				<div class="span5">
@@ -222,7 +210,11 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="/js/jquery.min.js" th:src="@{/js/jquery.min.js}"></script>
 <script src="/js/bootstrap.js" th:src="@{/js/bootstrap.js}"></script>
-
+<script>
+	$(".deletebtn").click(function () {
+	    $("#deleteStuForm").attr("action",$("#del_btn").attr("del_uri")).submit();
+    });
+</script>
 
 </body>
 </html>

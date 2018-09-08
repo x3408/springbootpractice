@@ -15,7 +15,7 @@ import javax.validation.constraints.NotNull;
 public class Student {
 
     @Id
-    @GeneratedValue                     //主键生成策略为自增长
+    @GeneratedValue                    //主键生成策略为自增长
     private Integer id;
 
     @NotNull(message = "名字不能为空")

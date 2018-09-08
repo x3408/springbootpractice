@@ -27,10 +27,12 @@ public class MyMvcConfig implements WebMvcConfigurer {
         WebMvcConfigurer adapter = new WebMvcConfigurer() {
             @Override
             public void addViewControllers(ViewControllerRegistry registry) {
+
                 registry.addViewController("/").setViewName("index");
                 registry.addViewController("/index.html").setViewName("index");
                 registry.addViewController("/listing.html").setViewName("listing");
                 registry.addViewController("/form.html").setViewName("form");
+                registry.addViewController("/add.html").setViewName("add");
             }
 
             /*@Override

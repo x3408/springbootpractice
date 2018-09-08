@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import javax.validation.Valid;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class StudentService {
@@ -24,5 +25,23 @@ public class StudentService {
     public Result addStudent(@Valid Student student) {
         studentRepository.save(student);
         return ResultUtil.success(student);
+    }
+
+    public Student getStudentById(Integer id) {
+        Optional<Student> byId = studentRepository.findById(id);
+
+        return byId.get();
+    }
+
+    public void updateStudent(Student student) {
+        studentRepository.save(student);
+    }
+
+    public void deleteStudent(Integer id) {
+        studentRepository.deleteById(id);
+    }
+
+    public void deleteStudent(Student studentById) {
+        studentRepository.delete(studentById);
     }
 }
